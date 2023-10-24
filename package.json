@@ -5,7 +5,8 @@
     "mongoose": "^7.6.3"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "seed": "node utils/seed.js"
   },
   "name": "socialnetworkapi",
   "version": "1.0.0",
