@@ -13,17 +13,20 @@
 
 ## Description 
 AS A social media startup, I want an API for my social network that uses a NoSQL database so that my website can handle large amounts of unstructured data.
-[USER all and single.webm](https://github.com/liex149/Social-Network-API/assets/132797792/a219e07f-4222-4402-bd3d-99ee27070663)
+[USER GET ALL and SINGLE.webm](https://github.com/liex149/Social-Network-API/assets/132797792/71f3548a-fbbe-45b1-a730-09d9d5c7cd57)
 
-[USER post delete put.webm](https://github.com/liex149/Social-Network-API/assets/132797792/b86ff32e-cc36-4c33-a6c9-8691308334cc)
+[USER POST,  PUT,  DELETE.webm](https://github.com/liex149/Social-Network-API/assets/132797792/32439ddb-9483-4120-92df-9a9d825e3fff)
 
-[USER friend post delete.webm](https://github.com/liex149/Social-Network-API/assets/132797792/52325038-e2af-4203-b674-21921af0acf8)
+[USER FRIEND POST AND DELETE.webm](https://github.com/liex149/Social-Network-API/assets/132797792/c23ee0ed-ef48-48e6-9e2e-62837b3172b2)
 
-[THOUGHT all and single.webm](https://github.com/liex149/Social-Network-API/assets/132797792/1e56517a-d8c1-424e-b251-2995060f6804)
+[THOUGHT GET ALL and SINGLE.webm](https://github.com/liex149/Social-Network-API/assets/132797792/665dc104-2a75-44ad-b2bb-e6bfe6eb05a6)
 
-[THOUGHT post delete put.webm](https://github.com/liex149/Social-Network-API/assets/132797792/cd2dc4d6-7c70-4bb4-aac7-eea731635f85)
+[THOUGHT POST, PUT, DELETE.webm](https://github.com/liex149/Social-Network-API/assets/132797792/b039a5cf-3a75-4c0c-b61a-83f6abb098cf)
 
-[THOUGHT reaction delete post.webm](https://github.com/liex149/Social-Network-API/assets/132797792/709ddee2-5121-4b88-81e6-57d76c3c3d5b)
+[THOUGHT REACTION POST AND DELETE.webm](https://github.com/liex149/Social-Network-API/assets/132797792/64ce4a55-09a7-462f-8203-eae4538fb528)
+
+
+
 
 ## Installation 
 User will need install npm i, express, moment, and mongoose, npm run seed
