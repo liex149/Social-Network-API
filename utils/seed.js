@@ -22,7 +22,7 @@ connection.once("open", async () => {
     await connection.dropCollection("thoughts");
     console.log("thoughts dropped-----------------");
   }
-
+// Thought ID
 const thought1ObId = new ObjectId()
 const thought2ObId = new ObjectId()
 const thought3ObId = new ObjectId()
@@ -52,7 +52,7 @@ const thought5ObId = new ObjectId()
     },
   ]);
 
-
+// username object ID
 const KirkObId = new ObjectId()
 const FrotoObId = new ObjectId()
 const DobbyObId = new ObjectId()
