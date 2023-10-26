@@ -1,79 +1,91 @@
 const connection = require("../config/connection");
 const { User, Thought, Reaction } = require("../models");
-
+const { ObjectId } = require('mongodb');
 connection.on("error", (err) => err);
 
 connection.once("open", async () => {
   console.log("connected");
   // Delete the collections if they exist
   let userCheck = await connection.db
-    .listCollections({ name: "User" })
+    .listCollections({ name: "users" })
     .toArray();
   if (userCheck.length) {
-    await connection.dropCollection("User");
+    await connection.dropCollection("users");
     console.log("names dropped-----------------");
   }
 
   // Delete the collections if they exist
   let thoughtCheck = await connection.db
-    .listCollections({ name: "Thought" })
+    .listCollections({ name: "thoughts" })
     .toArray();
   if (thoughtCheck.length) {
-    await connection.dropCollection("Thought");
+    await connection.dropCollection("thoughts");
     console.log("thoughts dropped-----------------");
   }
 
+const thought1ObId = new ObjectId()
+const thought2ObId = new ObjectId()
+const thought3ObId = new ObjectId()
+const thought4ObId = new ObjectId()
+const thought5ObId = new ObjectId()
+
   await Thought.collection.insertMany([
     {
-      _id: "HRmn0As5R56dsSDFe86121f1ey1S1", 
-      thoughtText: "my first thought",
+      _id: thought1ObId,
+      thoughtText: "thought 1",
     },
     {
-      _id: "HRmn0As5R56dsSDFe86121f1ey1S2", 
-      thoughtText: "my second thought",
+      _id: thought2ObId,
+      thoughtText: "thought 2",
     },
     {
-      _id: "HRmn0As5R56dsSDFe86121f1ey1S3", 
-      thoughtText: "my 3rd thought",
+      _id: thought3ObId,
+      thoughtText: "thought 3",
     },
     {
-      _id: "HRmn0As5R56dsSDFe86121f1ey1S4", 
-      thoughtText: "my 4th thought",
+      _id: thought4ObId,
+      thoughtText: "thought 4",
     },
     {
-      _id: "HRmn0As5R56dsSDFe86121f1ey1S5", 
-      thoughtText: "my 5th thought",
+      _id: thought5ObId,
+      thoughtText: "thought 5",
     },
   ]);
 
+
+const KirkObId = new ObjectId()
+const FrotoObId = new ObjectId()
+const DobbyObId = new ObjectId()
+const CrunchObId = new ObjectId()
+
   await User.collection.insertMany([
     {
-      _id: '65308ada461f580c1ee8c472',
-      username: "Michael",
-      email: "Michael@gmail.com",
-      thoughts: ["HRmn0As5R56dsSDFe86121f1ey1S1","HRmn0As5R56dsSDFe86121f1ey1S2"],
-      friends: ['65308ada461f580c1ee8c474', "65308ada461f580c1ee8c473", "65308ada461f580c1ee8c475"],
+      _id: KirkObId,
+      username: "CapKirk",
+      email: "CapKirk@gmail.com",
+      thoughts: [thought1ObId],
+      friends: [FrotoObId],
     },
     {
-      _id: '65308ada461f580c1ee8c473',
-      username: "Linh",
-      email: "Linh@gmail.com",
-      thoughts: ["HRmn0As5R56dsSDFe86121f1ey1S5"],
-      friends: ["65308ada461f580c1ee8c472", "65308ada461f580c1ee8c473"],
+      _id: FrotoObId,
+      username: "Froto",
+      email: "Froto@gmail.com",
+      thoughts: [thought3ObId],
+      friends: [KirkObId],
     },
     {
-      _id: '65308ada461f580c1ee8c474',
-      username: "Yee",
-      email: "Yee@gmail.com",
-      thoughts: ["HRmn0As5R56dsSDFe86121f1ey1S4"],
-      friends: ["65308ada461f580c1ee8c472", "65308ada461f580c1ee8c473"],
+      _id: DobbyObId,
+      username: "Dobby",
+      email: "Dobby@gmail.com",
+      thoughts: [thought2ObId],
+      friends: [FrotoObId, KirkObId, CrunchObId],
     },
     {
-      _id: '65308ada461f580c1ee8c475', 
-      username: "Jim",
-      email: "Jim@gmail.com",
-      thoughts: [],
-      friends: ["65308ada461f580c1ee8c472"],
+      _id: CrunchObId,
+      username: "CapCrunch",
+      email: "CapCrunch@gmail.com",
+      thoughts: [thought4ObId],
+      friends: [DobbyObId],
     },
   ]);
 
