@@ -117,7 +117,9 @@ async deleteReaction(req, res) {
         .status(404)
         .json({ message: "No reaction with that ID" });
     }
-
+    return res.status(200).json({
+      message: "Reaction successfully deleted",
+    });
     return res.status(200).json(reactionDeleted);
   } catch (err) {
     console.log(err);
