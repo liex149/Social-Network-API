@@ -13,6 +13,7 @@
 
 ## Description 
 AS A social media startup, I want an API for my social network that uses a NoSQL database so that my website can handle large amounts of unstructured data.
+
 [USER GET ALL and SINGLE.webm](https://github.com/liex149/Social-Network-API/assets/132797792/71f3548a-fbbe-45b1-a730-09d9d5c7cd57)
 
 [USER POST,  PUT,  DELETE.webm](https://github.com/liex149/Social-Network-API/assets/132797792/32439ddb-9483-4120-92df-9a9d825e3fff)
